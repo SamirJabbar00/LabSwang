@@ -8,9 +8,23 @@ public interface GreetingServiceAsync
 
     /**
      * GWT-RPC service  asynchronous (client-side) interface
-     * @see it.unibo.sweng.simplegwt.client.GreetingService#greetServer
+     * @see it.unibo.sweng.simplegwt.client.GreetingService#getDatabase
      */
-    void greetServer( java.lang.String name, AsyncCallback<java.lang.String> callback );
+    void getDatabase( AsyncCallback<java.lang.String> callback );
+
+
+    /**
+     * GWT-RPC service  asynchronous (client-side) interface
+     * @see it.unibo.sweng.simplegwt.client.GreetingService#registrazioneUtente
+     */
+    void registrazioneUtente( java.util.ArrayList<java.lang.String> dati, AsyncCallback<java.lang.String> callback );
+
+
+    /**
+     * GWT-RPC service  asynchronous (client-side) interface
+     * @see it.unibo.sweng.simplegwt.client.GreetingService#deleteUtente
+     */
+    void deleteUtente( java.lang.String email, AsyncCallback<java.lang.String> callback );
 
 
     /**

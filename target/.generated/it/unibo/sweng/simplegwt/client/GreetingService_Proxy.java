@@ -23,12 +23,10 @@ public class GreetingService_Proxy extends RemoteServiceProxy implements it.unib
       SERIALIZER);
   }
   
-  public void greetServer(java.lang.String name, com.google.gwt.user.client.rpc.AsyncCallback callback) {
-    com.google.gwt.user.client.rpc.impl.RemoteServiceProxy.ServiceHelper helper = new com.google.gwt.user.client.rpc.impl.RemoteServiceProxy.ServiceHelper("GreetingService_Proxy", "greetServer");
+  public void getDatabase(com.google.gwt.user.client.rpc.AsyncCallback callback) {
+    com.google.gwt.user.client.rpc.impl.RemoteServiceProxy.ServiceHelper helper = new com.google.gwt.user.client.rpc.impl.RemoteServiceProxy.ServiceHelper("GreetingService_Proxy", "getDatabase");
     try {
-      SerializationStreamWriter streamWriter = helper.start(REMOTE_SERVICE_INTERFACE_NAME, 1);
-      streamWriter.writeString("java.lang.String/2004016611");
-      streamWriter.writeString(name);
+      SerializationStreamWriter streamWriter = helper.start(REMOTE_SERVICE_INTERFACE_NAME, 0);
       helper.finish(callback, ResponseReader.STRING);
     } catch (SerializationException ex) {
       callback.onFailure(ex);

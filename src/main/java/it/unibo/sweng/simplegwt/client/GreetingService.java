@@ -1,5 +1,7 @@
 package it.unibo.sweng.simplegwt.client;
 
+import java.util.ArrayList;
+
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
@@ -8,5 +10,14 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
  */
 @RemoteServiceRelativePath("greet")
 public interface GreetingService extends RemoteService {
-  String greetServer(String name) throws IllegalArgumentException;
+
+
+  String getDatabase() throws IllegalArgumentException;
+  
+  String registrazioneUtente(ArrayList<String> dati) throws IllegalArgumentException;
+  
+  String deleteUtente(String email) throws IllegalArgumentException;
+  
 }
+
+

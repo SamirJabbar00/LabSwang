@@ -10,15 +10,21 @@
     <servlet-name>greetServlet</servlet-name>
     <servlet-class>it.unibo.sweng.simplegwt.server.GreetingServiceImpl</servlet-class>
   </servlet>
+  
 
   <servlet-mapping>
     <servlet-name>greetServlet</servlet-name>
     <url-pattern>/SimpleGwt/greet</url-pattern>
   </servlet-mapping>
+  
+  
+  <listener>
+    <listener-class>it.unibo.sweng.simplegwt.server.ListenerImpl</listener-class>
+  </listener>
 
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>SimpleGwt.html</welcome-file>
+    <welcome-file>Home</welcome-file>
   </welcome-file-list>
 
 </web-app>
